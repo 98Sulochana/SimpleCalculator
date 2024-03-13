@@ -34,6 +34,8 @@ type
     procedure btnBSClick(Sender: TObject);
     procedure btnCEClick(Sender: TObject);
     procedure btnPMClick(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnEqualsClick(Sender: TObject);
   private
     { Private declarations }
     //declare the variable
@@ -50,6 +52,13 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.btnAddClick(Sender: TObject);
+begin
+   firstnum := txtDisplay.Text;
+   opers := '+';
+   txtDisplay.Text := '';
+end;
 
 procedure TForm1.btnBSClick(Sender: TObject);
 begin
@@ -76,6 +85,15 @@ s := secondnum;
 f :='';
 s :='';
 
+end;
+
+procedure TForm1.btnEqualsClick(Sender: TObject);
+begin
+  secondnum := txtDisplay.Text;
+
+  if opers = '+' then
+  answer := FloatToStr(StrToFloat(firstnum) + StrToFloat(secondnum));
+  txtDisplay.Text := answer;
 end;
 
 procedure TForm1.btnPMClick(Sender: TObject);

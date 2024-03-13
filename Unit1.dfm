@@ -129,6 +129,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
+    OnClick = btnAddClick
   end
   object btnDigit4: TButton
     Left = 16
@@ -290,6 +291,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 18
+    OnClick = btnEqualsClick
   end
   object btnDiv: TButton
     Left = 259
