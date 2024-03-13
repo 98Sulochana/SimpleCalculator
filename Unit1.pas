@@ -39,6 +39,7 @@ type
     procedure btnSubClick(Sender: TObject);
     procedure btnMultClick(Sender: TObject);
     procedure btnDivClick(Sender: TObject);
+    procedure btnDotClick(Sender: TObject);
   private
     { Private declarations }
     //declare the variable
@@ -95,6 +96,16 @@ begin
 firstnum := txtDisplay.Text;
    opers := '/';
    txtDisplay.Text := '';
+end;
+
+procedure TForm1.btnDotClick(Sender: TObject);
+begin
+if (POS('.', txtDisplay.Text) <> 0) then
+exit
+else
+
+   txtDisplay.Text := txtDisplay.Text + btnDot.Caption;
+
 end;
 
 procedure TForm1.btnEqualsClick(Sender: TObject);

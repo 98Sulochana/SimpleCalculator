@@ -279,6 +279,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 17
+    OnClick = btnDotClick
   end
   object btnEquals: TButton
     Left = 178
