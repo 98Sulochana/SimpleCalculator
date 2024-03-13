@@ -39,6 +39,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    OnClick = btnBSClick
   end
   object btnCE: TButton
     Left = 97
@@ -53,6 +54,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = btnCEClick
   end
   object btnC: TButton
     Left = 178
@@ -67,6 +69,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    OnClick = btnCClick
   end
   object btnPM: TButton
     Left = 259
