@@ -1,0 +1,45 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    txtDisplay: TEdit;
+    btnBS: TButton;
+    btnCE: TButton;
+    btnC: TButton;
+    btnPM: TButton;
+    btnDigit7: TButton;
+    btnDigit9: TButton;
+    btnAdd: TButton;
+    btnDigit4: TButton;
+    btnDigit5: TButton;
+    btnDigit6: TButton;
+    btnSub: TButton;
+    btnDigit1: TButton;
+    btnDigit2: TButton;
+    btnDigit3: TButton;
+    btnMult: TButton;
+    btnDigit0: TButton;
+    btnDot: TButton;
+    btnEquals: TButton;
+    btnDiv: TButton;
+    btnDigit8: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
