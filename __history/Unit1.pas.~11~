@@ -33,7 +33,6 @@ type
     procedure btnCClick(Sender: TObject);
     procedure btnBSClick(Sender: TObject);
     procedure btnCEClick(Sender: TObject);
-    procedure btnPMClick(Sender: TObject);
   private
     { Private declarations }
     //declare the variable
@@ -75,16 +74,6 @@ s := secondnum;
 
 f :='';
 s :='';
-
-end;
-
-procedure TForm1.btnPMClick(Sender: TObject);
-
-var q: real;
-begin
-q := StrToFloat(txtDisplay.Text);
-
-txtDisplay.Text := FloatToStr (-1 * q);
 
 end;
 

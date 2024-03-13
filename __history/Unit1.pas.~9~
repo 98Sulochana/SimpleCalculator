@@ -85,7 +85,6 @@ begin
 q := StrToFloat(txtDisplay.Text);
 
 txtDisplay.Text := FloatToStr (-1 * q);
-
 end;
 
 procedure TForm1.NumbersClick(Sender: TObject);
