@@ -38,6 +38,7 @@ type
     procedure btnEqualsClick(Sender: TObject);
     procedure btnSubClick(Sender: TObject);
     procedure btnMultClick(Sender: TObject);
+    procedure btnDivClick(Sender: TObject);
   private
     { Private declarations }
     //declare the variable
@@ -89,6 +90,13 @@ s :='';
 
 end;
 
+procedure TForm1.btnDivClick(Sender: TObject);
+begin
+firstnum := txtDisplay.Text;
+   opers := '/';
+   txtDisplay.Text := '';
+end;
+
 procedure TForm1.btnEqualsClick(Sender: TObject);
 begin
   secondnum := txtDisplay.Text;
@@ -103,6 +111,10 @@ begin
 
   if opers = '*' then
   answer := FloatToStr(StrToFloat(firstnum) * StrToFloat(secondnum));
+  txtDisplay.Text := answer;
+
+  if opers = '/' then
+  answer := FloatToStr(StrToFloat(firstnum) / StrToFloat(secondnum));
   txtDisplay.Text := answer;
 
 end;
