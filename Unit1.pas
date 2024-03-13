@@ -36,6 +36,7 @@ type
     procedure btnPMClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);
     procedure btnEqualsClick(Sender: TObject);
+    procedure btnSubClick(Sender: TObject);
   private
     { Private declarations }
     //declare the variable
@@ -94,6 +95,10 @@ begin
   if opers = '+' then
   answer := FloatToStr(StrToFloat(firstnum) + StrToFloat(secondnum));
   txtDisplay.Text := answer;
+
+  if opers = '-' then
+  answer := FloatToStr(StrToFloat(firstnum) - StrToFloat(secondnum));
+  txtDisplay.Text := answer;
 end;
 
 procedure TForm1.btnPMClick(Sender: TObject);
@@ -105,6 +110,13 @@ q := StrToFloat(txtDisplay.Text);
 
 txtDisplay.Text := FloatToStr (-1 * q);
 
+end;
+
+procedure TForm1.btnSubClick(Sender: TObject);
+begin
+firstnum := txtDisplay.Text;
+   opers := '-';
+   txtDisplay.Text := '';
 end;
 
 procedure TForm1.NumbersClick(Sender: TObject);

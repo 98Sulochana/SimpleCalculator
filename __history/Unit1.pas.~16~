@@ -32,10 +32,15 @@ type
     procedure NumbersClick(Sender: TObject);
     procedure btnCClick(Sender: TObject);
     procedure btnBSClick(Sender: TObject);
+    procedure btnCEClick(Sender: TObject);
+    procedure btnPMClick(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnEqualsClick(Sender: TObject);
   private
     { Private declarations }
     //declare the variable
-
+     firstnum, secondnum, answer: string;
+     opers : char;
 
   public
     { Public declarations }
@@ -48,6 +53,13 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.btnAddClick(Sender: TObject);
+begin
+   firstnum := txtDisplay.Text;
+   opers := '+';
+   txtDisplay.Text := '';
+end;
+
 procedure TForm1.btnBSClick(Sender: TObject);
 begin
 txtDisplay.Text := copy(txtDisplay.Text, 1, length(txtDisplay.Text) - 1);
@@ -59,6 +71,40 @@ end;
 procedure TForm1.btnCClick(Sender: TObject);
 begin
 txtDisplay.Text := '0';
+end;
+
+procedure TForm1.btnCEClick(Sender: TObject);
+var f, s: string;
+begin
+
+txtDisplay.Text := '0';
+
+f := firstnum;
+s := secondnum;
+
+f :='';
+s :='';
+
+end;
+
+procedure TForm1.btnEqualsClick(Sender: TObject);
+begin
+  secondnum := txtDisplay.Text;
+
+  if opers = '+' then
+  answer := FloatToStr(StrToFloat(firstnum) + StrToFloat(secondnum));
+  txtDisplay.Text := answer;
+end;
+
+procedure TForm1.btnPMClick(Sender: TObject);
+
+var q: real;
+begin
+
+q := StrToFloat(txtDisplay.Text);
+
+txtDisplay.Text := FloatToStr (-1 * q);
+
 end;
 
 procedure TForm1.NumbersClick(Sender: TObject);
@@ -79,3 +125,4 @@ else
 end;
 
 end.
+
