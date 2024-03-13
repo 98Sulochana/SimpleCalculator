@@ -82,6 +82,7 @@ procedure TForm1.btnPMClick(Sender: TObject);
 
 var q: real;
 begin
+
 q := StrToFloat(txtDisplay.Text);
 
 txtDisplay.Text := FloatToStr (-1 * q);
@@ -106,3 +107,4 @@ else
 end;
 
 end.
+
